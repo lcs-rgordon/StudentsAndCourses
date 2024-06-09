@@ -41,4 +41,33 @@ class StudentsListViewModel: Observable {
         
     }
     
+    
+    func createStudent(firstName: String, lastName: String) {
+        
+        Task {
+            
+            // Create the new student
+            // NOTE: The id will be nil for now
+            let newStudent = Student(
+                firstName: firstName,
+                lastName: lastName
+            )
+            
+            do {
+                // Write the new student to the database
+                try await supabase
+                    .from("student")
+                    .insert(newStudent)
+                    .execute()
+                
+                // Refresh the list of students
+                try await self.getStudents()
+
+            } catch {
+                debugPrint(error)
+            }
+            
+        }
+    }
+    
 }
