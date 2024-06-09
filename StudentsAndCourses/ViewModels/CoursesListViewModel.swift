@@ -39,4 +39,32 @@ class CoursesListViewModel: Observable {
         
     }
     
+    func createCourse(shortCode: String, name: String) {
+        
+        Task {
+            
+            // Create the new course
+            // NOTE: The id will be nil for now
+            let newCourse = Course(
+                shortCode: shortCode,
+                name: name
+            )
+            
+            do {
+                // Write the new course to the database
+                try await supabase
+                    .from("course")
+                    .insert(newCourse)
+                    .execute()
+                
+                // Refresh the list of courses
+                try await self.getCourses()
+
+            } catch {
+                debugPrint(error)
+            }
+            
+        }
+    }
+    
 }
