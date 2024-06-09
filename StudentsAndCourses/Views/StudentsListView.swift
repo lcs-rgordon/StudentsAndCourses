@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct StudentsListView: View {
+    
+    // MARK: Stored properties
+    @State private var viewModel = StudentsListViewModel()
+    
+    // MARK: Computed properties
     var body: some View {
         NavigationStack {
             VStack {
-                List {
-                    Text("Barbour, Nick")
-                    Text("Cho, Emily")
-                    Text("Haberman, Jamie")
+                List(viewModel.students) { student in
+                    Text("\(student.lastName), \(student.firstName)")
                 }
-                
             }
             .navigationTitle("Students")
         }
