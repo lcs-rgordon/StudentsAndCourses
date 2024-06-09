@@ -12,6 +12,8 @@ struct CoursesListView: View {
     // MARK: Stored properties
     @State private var viewModel = CoursesListViewModel()
     
+    @State private var isNewCourseSheetShowing = false
+    
     // MARK: Computed properties
     var body: some View {
         NavigationStack {
@@ -23,6 +25,21 @@ struct CoursesListView: View {
                         Text(course.name)
                             .font(.subheadline)
                     }
+                }
+            }
+            .sheet(isPresented: $isNewCourseSheetShowing) {
+                AddCourseView(isShowing: $isNewCourseSheetShowing)
+                    .environment(viewModel) // Must insert view model into environment
+                    .presentationDetents([.fraction(0.3)])
+            }
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        isNewCourseSheetShowing = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+
                 }
             }
             .navigationTitle("Courses")
