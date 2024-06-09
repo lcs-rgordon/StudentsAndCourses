@@ -23,6 +23,7 @@
 		81A2E2872C15F25F00E6285E /* StudentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2862C15F25F00E6285E /* StudentsListView.swift */; };
 		81A2E2892C16020300E6285E /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2882C16020300E6285E /* Course.swift */; };
 		81A2E28B2C1602FC00E6285E /* CoursesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E28A2C1602FC00E6285E /* CoursesListViewModel.swift */; };
+		81A2E28D2C16086200E6285E /* AddCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E28C2C16086200E6285E /* AddCourseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		81A2E2862C15F25F00E6285E /* StudentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsListView.swift; sourceTree = "<group>"; };
 		81A2E2882C16020300E6285E /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		81A2E28A2C1602FC00E6285E /* CoursesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListViewModel.swift; sourceTree = "<group>"; };
+		81A2E28C2C16086200E6285E /* AddCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				81A2E2822C15F1F200E6285E /* EnrolmentsView.swift */,
 				81A2E2842C15F22B00E6285E /* CoursesListView.swift */,
 				81A2E2862C15F25F00E6285E /* StudentsListView.swift */,
+				81A2E28C2C16086200E6285E /* AddCourseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				81A2E2832C15F1F200E6285E /* EnrolmentsView.swift in Sources */,
 				81A2E2722C15EEF500E6285E /* Supabase.swift in Sources */,
 				810E98082C15EE6500B0A051 /* StudentsAndCoursesApp.swift in Sources */,
+				81A2E28D2C16086200E6285E /* AddCourseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
