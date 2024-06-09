@@ -28,6 +28,7 @@ class CoursesListViewModel: Observable {
             let results: [Course] = try await supabase
                 .from("course")
                 .select()
+                .order("short_code", ascending: true)
                 .execute()
                 .value
             
