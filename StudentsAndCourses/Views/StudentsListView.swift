@@ -9,12 +9,17 @@ import SwiftUI
 
 struct StudentsListView: View {
     var body: some View {
-        VStack {
-            Text("Students List")
-                .bold()
-            Text("This view will show a list of students. Students will be able to be added using a + button from the toolbar, which will show a sheet with the necessary interface to add a course. You will not be able to create enrolments for a student on this screen; that will happen elsewhere in the app.")
+        NavigationStack {
+            VStack {
+                List {
+                    Text("Barbour, Nick")
+                    Text("Cho, Emily")
+                    Text("Haberman, Jamie")
+                }
+                
+            }
+            .navigationTitle("Students")
         }
-        .padding()
     }
 }
 
