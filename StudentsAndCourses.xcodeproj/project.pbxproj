@@ -25,6 +25,7 @@
 		81A2E28B2C1602FC00E6285E /* CoursesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E28A2C1602FC00E6285E /* CoursesListViewModel.swift */; };
 		81A2E28D2C16086200E6285E /* AddCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E28C2C16086200E6285E /* AddCourseView.swift */; };
 		81A2E28F2C16135900E6285E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E28E2C16135900E6285E /* Student.swift */; };
+		81A2E2912C1613E300E6285E /* StudentsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2902C1613E300E6285E /* StudentsListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		81A2E28A2C1602FC00E6285E /* CoursesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListViewModel.swift; sourceTree = "<group>"; };
 		81A2E28C2C16086200E6285E /* AddCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseView.swift; sourceTree = "<group>"; };
 		81A2E28E2C16135900E6285E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		81A2E2902C1613E300E6285E /* StudentsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				81A2E28A2C1602FC00E6285E /* CoursesListViewModel.swift */,
+				81A2E2902C1613E300E6285E /* StudentsListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				81A2E2722C15EEF500E6285E /* Supabase.swift in Sources */,
 				810E98082C15EE6500B0A051 /* StudentsAndCoursesApp.swift in Sources */,
 				81A2E28D2C16086200E6285E /* AddCourseView.swift in Sources */,
+				81A2E2912C1613E300E6285E /* StudentsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
