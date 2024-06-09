@@ -9,12 +9,24 @@ import SwiftUI
 
 struct EnrolmentsView: View {
     var body: some View {
-        VStack {
-            Text("Enrolments")
-                .bold()
-            Text("This view might show a segmented picker, allowing the user to view enrolments by course, or, by student.")
+        NavigationStack {
+            List {
+
+                NavigationLink {
+                    EnrolmentsByCourseView()
+                } label: {
+                    Text("By course")
+                }
+
+                NavigationLink {
+                    EnrolmentsByStudentView()
+                } label: {
+                    Text("By student")
+                }
+
+            }
+            .navigationTitle("Enrolments")
         }
-        .padding()
     }
 }
 
