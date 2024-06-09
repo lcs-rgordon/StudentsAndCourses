@@ -22,6 +22,7 @@
 		81A2E2852C15F22B00E6285E /* CoursesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2842C15F22B00E6285E /* CoursesListView.swift */; };
 		81A2E2872C15F25F00E6285E /* StudentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2862C15F25F00E6285E /* StudentsListView.swift */; };
 		81A2E2892C16020300E6285E /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2882C16020300E6285E /* Course.swift */; };
+		81A2E28B2C1602FC00E6285E /* CoursesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E28A2C1602FC00E6285E /* CoursesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		81A2E2842C15F22B00E6285E /* CoursesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListView.swift; sourceTree = "<group>"; };
 		81A2E2862C15F25F00E6285E /* StudentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsListView.swift; sourceTree = "<group>"; };
 		81A2E2882C16020300E6285E /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		81A2E28A2C1602FC00E6285E /* CoursesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		810E98172C15EE9100B0A051 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				81A2E28A2C1602FC00E6285E /* CoursesListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A2E2872C15F25F00E6285E /* StudentsListView.swift in Sources */,
+				81A2E28B2C1602FC00E6285E /* CoursesListViewModel.swift in Sources */,
 				81A2E2892C16020300E6285E /* Course.swift in Sources */,
 				81A2E2812C15F1CF00E6285E /* LandingView.swift in Sources */,
 				81A2E2852C15F22B00E6285E /* CoursesListView.swift in Sources */,
