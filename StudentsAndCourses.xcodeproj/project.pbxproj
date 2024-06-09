@@ -29,6 +29,8 @@
 		81A2E2932C16165400E6285E /* AddStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2922C16165400E6285E /* AddStudentView.swift */; };
 		81A2E2972C1639B400E6285E /* EnrolmentsByCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2962C1639B400E6285E /* EnrolmentsByCourseView.swift */; };
 		81A2E29B2C163C5900E6285E /* EnrolmentsByStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E29A2C163C5900E6285E /* EnrolmentsByStudentView.swift */; };
+		81A2E29D2C163DF200E6285E /* Course+Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E29C2C163DF200E6285E /* Course+Student.swift */; };
+		81A2E29F2C163E8600E6285E /* EnrolmentsByCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E29E2C163E8600E6285E /* EnrolmentsByCourseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		81A2E2922C16165400E6285E /* AddStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentView.swift; sourceTree = "<group>"; };
 		81A2E2962C1639B400E6285E /* EnrolmentsByCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrolmentsByCourseView.swift; sourceTree = "<group>"; };
 		81A2E29A2C163C5900E6285E /* EnrolmentsByStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrolmentsByStudentView.swift; sourceTree = "<group>"; };
+		81A2E29C2C163DF200E6285E /* Course+Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Student.swift"; sourceTree = "<group>"; };
+		81A2E29E2C163E8600E6285E /* EnrolmentsByCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrolmentsByCourseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 			children = (
 				81A2E2882C16020300E6285E /* Course.swift */,
 				81A2E28E2C16135900E6285E /* Student.swift */,
+				81A2E29C2C163DF200E6285E /* Course+Student.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			children = (
 				81A2E28A2C1602FC00E6285E /* CoursesListViewModel.swift */,
 				81A2E2902C1613E300E6285E /* StudentsListViewModel.swift */,
+				81A2E29E2C163E8600E6285E /* EnrolmentsByCourseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -229,11 +235,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A2E2972C1639B400E6285E /* EnrolmentsByCourseView.swift in Sources */,
+				81A2E29F2C163E8600E6285E /* EnrolmentsByCourseViewModel.swift in Sources */,
 				81A2E2872C15F25F00E6285E /* StudentsListView.swift in Sources */,
 				81A2E28B2C1602FC00E6285E /* CoursesListViewModel.swift in Sources */,
 				81A2E2892C16020300E6285E /* Course.swift in Sources */,
 				81A2E29B2C163C5900E6285E /* EnrolmentsByStudentView.swift in Sources */,
 				81A2E28F2C16135900E6285E /* Student.swift in Sources */,
+				81A2E29D2C163DF200E6285E /* Course+Student.swift in Sources */,
 				81A2E2812C15F1CF00E6285E /* LandingView.swift in Sources */,
 				81A2E2852C15F22B00E6285E /* CoursesListView.swift in Sources */,
 				81A2E2832C15F1F200E6285E /* EnrolmentsView.swift in Sources */,

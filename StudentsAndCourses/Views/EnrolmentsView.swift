@@ -13,7 +13,9 @@ struct EnrolmentsView: View {
             List {
 
                 NavigationLink {
-                    EnrolmentsByCourseView()
+                    EnrolmentsByCourseView(
+                        viewModel: EnrolmentsByCourseViewModel()
+                    )
                 } label: {
                     Text("By course")
                 }

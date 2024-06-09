@@ -8,24 +8,17 @@
 import SwiftUI
 
 struct EnrolmentsByCourseView: View {
+    
+    // MARK: Stored properties
+    let viewModel: EnrolmentsByCourseViewModel
+    
+    // MARK: Computed properties
     var body: some View {
-        List {
+        List(viewModel.coursesWithStudents) { course in
             VStack(alignment: .leading) {
-                Text("ADA3M")
+                Text(course.shortCode)
                     .bold()
-                Text("Drama")
-                    .font(.subheadline)
-            }
-            VStack(alignment: .leading) {
-                Text("AMU3M")
-                    .bold()
-                Text("Music")
-                    .font(.subheadline)
-            }
-            VStack(alignment: .leading) {
-                Text("AVI3M")
-                    .bold()
-                Text("Visual Arts")
+                Text(course.name)
                     .font(.subheadline)
             }
         }
@@ -35,6 +28,6 @@ struct EnrolmentsByCourseView: View {
 
 #Preview {
     NavigationStack {
-        EnrolmentsByCourseView()
+        EnrolmentsByCourseView(viewModel: EnrolmentsByCourseViewModel())
     }
 }
