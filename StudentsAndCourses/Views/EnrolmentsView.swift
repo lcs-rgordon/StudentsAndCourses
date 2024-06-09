@@ -21,7 +21,9 @@ struct EnrolmentsView: View {
                 }
 
                 NavigationLink {
-                    EnrolmentsByStudentView()
+                    EnrolmentsByStudentView(
+                        viewModel: EnrolmentsByStudentViewModel()
+                    )
                 } label: {
                     Text("By student")
                 }

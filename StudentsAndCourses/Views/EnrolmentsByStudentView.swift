@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct EnrolmentsByStudentView: View {
+    
+    // MARK: Stored properties
+    let viewModel: EnrolmentsByStudentViewModel
+    
+    // MARK: Computed properties
     var body: some View {
-        List {
-            Text("Barbour, Nick")
-            Text("Cho, Emily")
-            Text("Doe, John")
+        List(viewModel.studentsWithCourses) { student in
+            HStack {
+                Text("\(student.lastName), \(student.firstName)")
+                
+                Spacer()
+                
+                Text("\(student.courses.count)")
+                    .font(.title2)
+                    .fontDesign(.monospaced)
+                    .foregroundStyle(.secondary)
+            }
         }
         .navigationTitle("Students")
     }
@@ -20,6 +32,8 @@ struct EnrolmentsByStudentView: View {
 
 #Preview {
     NavigationStack {
-        EnrolmentsByStudentView()
+        EnrolmentsByStudentView(
+            viewModel: EnrolmentsByStudentViewModel()
+        )
     }
 }

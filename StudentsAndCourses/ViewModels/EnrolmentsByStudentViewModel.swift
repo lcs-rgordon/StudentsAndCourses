@@ -28,7 +28,9 @@ class EnrolmentsByStudentViewModel: Observable {
             let results: [StudentCourse] = try await supabase
                 .from("student")
                 .select("id, first_name, last_name, course(id, short_code, name)")
-                .execute()
+                .order("last_name", ascending: true)    // First order by last name, alphabetically
+                .order("first_name", ascending: true)   // Then order by first name, alphabetically
+                .execute()                              // e.g.: "Smith, Abe" should come before "Smith, Nathan"
                 .value
 
             self.studentsWithCourses = results
