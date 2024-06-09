@@ -10,23 +10,38 @@ import SwiftUI
 struct EnrolmentsByStudentView: View {
     
     // MARK: Stored properties
+    
+    // Provides data to this view
     let viewModel: EnrolmentsByStudentViewModel
     
     // MARK: Computed properties
     var body: some View {
-        List(viewModel.studentsWithCourses) { student in
-            HStack {
-                Text("\(student.lastName), \(student.firstName)")
+        VStack(alignment: .leading) {
+            
+            if viewModel.isFilteredByCourse {
+                Text(viewModel.course!.name)
+                    .font(.subheadline)
+                    .padding(.horizontal)
                 
-                Spacer()
-                
-                Text("\(student.courses.count)")
-                    .font(.title2)
-                    .fontDesign(.monospaced)
-                    .foregroundStyle(.secondary)
+            }
+            
+            List(viewModel.studentsWithCourses) { student in
+                HStack {
+                    Text("\(student.lastName), \(student.firstName)")
+                    
+                    Spacer()
+
+                    // Only show course count for a student when not filtering by course
+                    if viewModel.isFilteredByCourse == false {
+                        Text("\(student.courses.count)")
+                            .font(.title2)
+                            .fontDesign(.monospaced)
+                            .foregroundStyle(.secondary)
+                    }
+                }
             }
         }
-        .navigationTitle("Students")
+        .navigationTitle(viewModel.isFilteredByCourse ? viewModel.course!.shortCode : "Students")
     }
 }
 
