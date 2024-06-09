@@ -8,26 +8,19 @@
 import SwiftUI
 
 struct CoursesListView: View {
+    
+    // MARK: Stored properties
+    @State private var viewModel = CoursesListViewModel()
+    
+    // MARK: Computed properties
     var body: some View {
         NavigationStack {
             VStack {
-                List {
+                List(viewModel.courses) { course in
                     VStack(alignment: .leading) {
-                        Text("ENG3U")
+                        Text(course.shortCode)
                             .bold()
-                        Text("English")
-                            .font(.subheadline)
-                    }
-                    VStack(alignment: .leading) {
-                        Text("ICS3U")
-                            .bold()
-                        Text("Introduction to Computer Science")
-                            .font(.subheadline)
-                    }
-                    VStack(alignment: .leading) {
-                        Text("MCR3U")
-                            .bold()
-                        Text("Functions")
+                        Text(course.name)
                             .font(.subheadline)
                     }
                 }
