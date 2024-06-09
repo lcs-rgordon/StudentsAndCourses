@@ -28,6 +28,7 @@ class EnrolmentsByCourseViewModel: Observable {
             let results: [CourseStudent] = try await supabase
                 .from("course")
                 .select("id, short_code, name, student(id, first_name, last_name)")
+                .order("short_code", ascending: true)
                 .execute()
                 .value
 

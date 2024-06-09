@@ -15,11 +15,20 @@ struct EnrolmentsByCourseView: View {
     // MARK: Computed properties
     var body: some View {
         List(viewModel.coursesWithStudents) { course in
-            VStack(alignment: .leading) {
-                Text(course.shortCode)
-                    .bold()
-                Text(course.name)
-                    .font(.subheadline)
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(course.shortCode)
+                        .bold()
+                    Text(course.name)
+                        .font(.subheadline)
+                }
+                
+                Spacer()
+                
+                Text("\(course.students.count)")
+                    .font(.title2)
+                    .fontDesign(.monospaced)
+                    .foregroundStyle(.secondary)
             }
         }
         .navigationTitle("Courses")
