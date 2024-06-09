@@ -9,12 +9,31 @@ import SwiftUI
 
 struct CoursesListView: View {
     var body: some View {
-        VStack {
-            Text("Courses List")
-                .bold()
-            Text("This view will show a list of courses. Courses will be able to be added using a + button from the toolbar, which will show a sheet with the necessary interface to add a course.")
+        NavigationStack {
+            VStack {
+                List {
+                    VStack(alignment: .leading) {
+                        Text("ENG3U")
+                            .bold()
+                        Text("English")
+                            .font(.subheadline)
+                    }
+                    VStack(alignment: .leading) {
+                        Text("ICS3U")
+                            .bold()
+                        Text("Introduction to Computer Science")
+                            .font(.subheadline)
+                    }
+                    VStack(alignment: .leading) {
+                        Text("MCR3U")
+                            .bold()
+                        Text("Functions")
+                            .font(.subheadline)
+                    }
+                }
+            }
+            .navigationTitle("Courses")
         }
-        .padding()
     }
 }
 
