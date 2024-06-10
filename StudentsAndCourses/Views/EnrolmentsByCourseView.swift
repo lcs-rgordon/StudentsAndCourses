@@ -10,6 +10,8 @@ import SwiftUI
 struct EnrolmentsByCourseView: View {
     
     // MARK: Stored properties
+    
+    // Provides data to this view
     let viewModel: EnrolmentsByCourseViewModel
     
     // MARK: Computed properties
@@ -37,14 +39,18 @@ struct EnrolmentsByCourseView: View {
                     
                     Spacer()
                     
-                    Text("\(course.students.count)")
-                        .font(.title2)
-                        .fontDesign(.monospaced)
-                        .foregroundStyle(.secondary)
+                    // Only show enrolled students count when not filtering by a student
+                    if viewModel.isFilteredByStudent == false {
+                        Text("\(course.students.count)")
+                            .font(.title2)
+                            .fontDesign(.monospaced)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
         }
-        .navigationTitle("Courses")
+        .navigationTitle(viewModel.isFilteredByStudent ? "\(viewModel.student!.lastName), \(viewModel.student!.firstName)" : "Courses")
+        
     }
 }
 
