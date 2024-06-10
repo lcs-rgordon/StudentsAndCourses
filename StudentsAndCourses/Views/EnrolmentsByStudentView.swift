@@ -25,18 +25,32 @@ struct EnrolmentsByStudentView: View {
             }
             
             List(viewModel.studentsWithCourses) { student in
-                HStack {
-                    Text("\(student.lastName), \(student.firstName)")
-                    
-                    Spacer()
+                
+                NavigationLink {
+                    EnrolmentsByCourseView(
+                        viewModel: EnrolmentsByCourseViewModel(
+                            student: Student(
+                                id: student.id,
+                                firstName: student.firstName,
+                                lastName: student.lastName
+                            )
+                        )
+                    )
+                } label: {
+                    HStack {
+                        Text("\(student.lastName), \(student.firstName)")
+                        
+                        Spacer()
 
-                    // Only show the enrolled course count for a student when not filtering by course
-                    if viewModel.isFilteredByCourse == false {
-                        Text("\(student.courses.count)")
-                            .font(.title2)
-                            .fontDesign(.monospaced)
-                            .foregroundStyle(.secondary)
+                        // Only show the enrolled course count for a student when not filtering by course
+                        if viewModel.isFilteredByCourse == false {
+                            Text("\(student.courses.count)")
+                                .font(.title2)
+                                .fontDesign(.monospaced)
+                                .foregroundStyle(.secondary)
+                        }
                     }
+
                 }
             }
         }
