@@ -14,19 +14,34 @@ struct EnrolmentsByStudentView: View {
     
     // MARK: Computed properties
     var body: some View {
-        List(viewModel.studentsWithCourses) { student in
-            HStack {
-                Text("\(student.lastName), \(student.firstName)")
+        VStack(alignment: .leading) {
+            
+            // When viewing students for a specific course, show the course name
+            if viewModel.isFilteredByCourse {
+                Text(viewModel.course!.name)
+                    .font(.subheadline)
+                    .padding(.horizontal)
                 
-                Spacer()
-                
-                Text("\(student.courses.count)")
-                    .font(.title2)
-                    .fontDesign(.monospaced)
-                    .foregroundStyle(.secondary)
+            }
+            
+            List(viewModel.studentsWithCourses) { student in
+                HStack {
+                    Text("\(student.lastName), \(student.firstName)")
+                    
+                    Spacer()
+
+                    // Only show the enrolled course count for a student when not filtering by course
+                    if viewModel.isFilteredByCourse == false {
+                        Text("\(student.courses.count)")
+                            .font(.title2)
+                            .fontDesign(.monospaced)
+                            .foregroundStyle(.secondary)
+                    }
+                }
             }
         }
-        .navigationTitle("Students")
+        // Show the course code as the navigation title when filtering by a specific course
+        .navigationTitle(viewModel.isFilteredByCourse ? viewModel.course!.shortCode : "Students")
     }
 }
 
