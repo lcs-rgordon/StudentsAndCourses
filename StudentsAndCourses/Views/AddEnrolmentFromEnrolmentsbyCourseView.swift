@@ -1,5 +1,5 @@
 //
-//  AddEnrolmentFromStudentView.swift
+//  AddEnrolmentFromEnrolmentsbyCourseView.swift
 //  StudentsAndCourses
 //
 //  Created by Russell Gordon on 2024-06-10.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddEnrolmentFromStudentView: View {
+struct AddEnrolmentFromEnrolmentsbyCourseView: View {
     
     // MARK: Stored properties
     
@@ -15,7 +15,7 @@ struct AddEnrolmentFromStudentView: View {
     @Binding var isShowing: Bool
     
     // Receive a reference to our view model
-    let viewModel: AddEnrolmentFromStudentViewModel
+    let viewModel: AddEnrolmentFromEnrolmentsbyCourseViewModel
     
     // Stores the selected course
     @State private var selectedCourseId: Int = 0
@@ -68,10 +68,10 @@ struct AddEnrolmentFromStudentView: View {
             // Show the instance of AddEnrolmentFromStudentView
             // and provide it with an instance of it's view model
             // so it can talk to the database
-            AddEnrolmentFromStudentView(
+            AddEnrolmentFromEnrolmentsbyCourseView(
                 
                 isShowing: Binding.constant(true),
-                viewModel: AddEnrolmentFromStudentViewModel(
+                viewModel: AddEnrolmentFromEnrolmentsbyCourseViewModel(
                     availableTo: Student(
                         id: 1,
                         firstName: "",

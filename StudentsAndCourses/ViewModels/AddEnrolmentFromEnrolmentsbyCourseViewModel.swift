@@ -1,5 +1,5 @@
 //
-//  AddEnrolmentFromStudentViewModel.swift
+//  AddEnrolmentFromEnrolmentsbyCourseViewModel.swift
 //  StudentsAndCourses
 //
 //  Created by Russell Gordon on 2024-06-10.
@@ -9,7 +9,7 @@ import Foundation
 import PostgREST
 
 @Observable
-class AddEnrolmentFromStudentViewModel: Observable {
+class AddEnrolmentFromEnrolmentsbyCourseViewModel: Observable {
     
     // MARK: Stored properties
     

@@ -34,8 +34,8 @@
 		81A2E2A12C16577100E6285E /* Student+Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2A02C16577100E6285E /* Student+Course.swift */; };
 		81A2E2A32C16588600E6285E /* EnrolmentsByStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2A22C16588600E6285E /* EnrolmentsByStudentViewModel.swift */; };
 		81A2E2A72C17110000E6285E /* Enrolment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2A62C17110000E6285E /* Enrolment.swift */; };
-		81A2E2A92C17122500E6285E /* AddEnrolmentFromStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2A82C17122500E6285E /* AddEnrolmentFromStudentViewModel.swift */; };
-		81A2E2AD2C1746EA00E6285E /* AddEnrolmentFromStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2AC2C1746EA00E6285E /* AddEnrolmentFromStudentView.swift */; };
+		81A2E2A92C17122500E6285E /* AddEnrolmentFromEnrolmentsbyCourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2A82C17122500E6285E /* AddEnrolmentFromEnrolmentsbyCourseViewModel.swift */; };
+		81A2E2AD2C1746EA00E6285E /* AddEnrolmentFromEnrolmentsbyCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2AC2C1746EA00E6285E /* AddEnrolmentFromEnrolmentsbyCourseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +61,8 @@
 		81A2E2A02C16577100E6285E /* Student+Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+Course.swift"; sourceTree = "<group>"; };
 		81A2E2A22C16588600E6285E /* EnrolmentsByStudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrolmentsByStudentViewModel.swift; sourceTree = "<group>"; };
 		81A2E2A62C17110000E6285E /* Enrolment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enrolment.swift; sourceTree = "<group>"; };
-		81A2E2A82C17122500E6285E /* AddEnrolmentFromStudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEnrolmentFromStudentViewModel.swift; sourceTree = "<group>"; };
-		81A2E2AC2C1746EA00E6285E /* AddEnrolmentFromStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEnrolmentFromStudentView.swift; sourceTree = "<group>"; };
+		81A2E2A82C17122500E6285E /* AddEnrolmentFromEnrolmentsbyCourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEnrolmentFromEnrolmentsbyCourseViewModel.swift; sourceTree = "<group>"; };
+		81A2E2AC2C1746EA00E6285E /* AddEnrolmentFromEnrolmentsbyCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEnrolmentFromEnrolmentsbyCourseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +143,7 @@
 				81A2E2922C16165400E6285E /* AddStudentView.swift */,
 				81A2E2962C1639B400E6285E /* EnrolmentsByCourseView.swift */,
 				81A2E29A2C163C5900E6285E /* EnrolmentsByStudentView.swift */,
-				81A2E2AC2C1746EA00E6285E /* AddEnrolmentFromStudentView.swift */,
+				81A2E2AC2C1746EA00E6285E /* AddEnrolmentFromEnrolmentsbyCourseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 				81A2E2902C1613E300E6285E /* StudentsListViewModel.swift */,
 				81A2E29E2C163E8600E6285E /* EnrolmentsByCourseViewModel.swift */,
 				81A2E2A22C16588600E6285E /* EnrolmentsByStudentViewModel.swift */,
-				81A2E2A82C17122500E6285E /* AddEnrolmentFromStudentViewModel.swift */,
+				81A2E2A82C17122500E6285E /* AddEnrolmentFromEnrolmentsbyCourseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -254,8 +254,8 @@
 				81A2E2872C15F25F00E6285E /* StudentsListView.swift in Sources */,
 				81A2E28B2C1602FC00E6285E /* CoursesListViewModel.swift in Sources */,
 				81A2E2892C16020300E6285E /* Course.swift in Sources */,
-				81A2E2A92C17122500E6285E /* AddEnrolmentFromStudentViewModel.swift in Sources */,
-				81A2E2AD2C1746EA00E6285E /* AddEnrolmentFromStudentView.swift in Sources */,
+				81A2E2A92C17122500E6285E /* AddEnrolmentFromEnrolmentsbyCourseViewModel.swift in Sources */,
+				81A2E2AD2C1746EA00E6285E /* AddEnrolmentFromEnrolmentsbyCourseView.swift in Sources */,
 				81A2E29B2C163C5900E6285E /* EnrolmentsByStudentView.swift in Sources */,
 				81A2E28F2C16135900E6285E /* Student.swift in Sources */,
 				81A2E29D2C163DF200E6285E /* Course+Student.swift in Sources */,
