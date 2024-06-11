@@ -12,6 +12,9 @@ struct EnrolmentsByCourseView: View {
     // MARK: Stored properties
     let viewModel: EnrolmentsByCourseViewModel
     
+    // Are we showing the sheet to add an enrolment for a student?
+    @State private var isAddEnrolmentSheetShowing = false
+    
     // MARK: Computed properties
     var body: some View {
         List(viewModel.coursesWithStudents) { course in
@@ -52,6 +55,25 @@ struct EnrolmentsByCourseView: View {
                 }
             }
         }
+        .toolbar {
+            // Only show the button when seeing courses for a
+            // specific student
+            if viewModel.isFilteredByStudent {
+                Button {
+                    isAddEnrolmentSheetShowing = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
+        .sheet(isPresented: $isAddEnrolmentSheetShowing) {
+            // Show the interface to add a student
+            AddEnrolmentFromEnrolmentsbyCourseView(
+                isShowing: $isAddEnrolmentSheetShowing,
+                viewModel: AddEnrolmentFromEnrolmentsbyCourseViewModel(availableTo: viewModel.student!)
+            )
+        }
+        
         // Show the student name as the navigation title when filtering by a specific student
         .navigationTitle(viewModel.isFilteredByStudent ? "\(viewModel.student!.lastName), \(viewModel.student!.firstName)" : "Courses")
     }
