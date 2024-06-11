@@ -42,8 +42,12 @@ struct AddEnrolmentFromStudentView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
-                        // TODO: Add the enrolment
-                        isShowing = false
+                        Task {
+                            try await viewModel.saveEnrolment(
+                                forCourseWithId: selectedCourseId
+                            )
+                            isShowing = false
+                        }
                     } label: {
                         Text("Enrol")
                     }
@@ -55,16 +59,27 @@ struct AddEnrolmentFromStudentView: View {
 }
 
 #Preview {
+    
+    // Create a view to attach a sheet to
     Text("Example parent view")
+        // Present AddEnrolmentFromStudentView in a sheet
         .sheet(isPresented: Binding.constant(true)) {
+            
+            // Show the instance of AddEnrolmentFromStudentView
+            // and provide it with an instance of it's view model
+            // so it can talk to the database
             AddEnrolmentFromStudentView(
-                isShowing: Binding.constant(
-                    true
-                ),
-                viewModel: AddEnrolmentFromStudentViewModel(
-                    availableTo: Student(id: 1, firstName: "", lastName: "")
-                )
-            )
                 
+                isShowing: Binding.constant(true),
+                viewModel: AddEnrolmentFromStudentViewModel(
+                    availableTo: Student(
+                        id: 1,
+                        firstName: "",
+                        lastName: ""
+                    )
+                )
+                
+            )
+            
         }
 }

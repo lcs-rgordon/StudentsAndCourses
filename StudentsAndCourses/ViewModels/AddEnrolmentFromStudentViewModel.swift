@@ -12,10 +12,17 @@ import PostgREST
 class AddEnrolmentFromStudentViewModel: Observable {
     
     // MARK: Stored properties
+    
     var availableCourses: [Course] = []
+    
+    let currentStudent: Student
     
     // MARK: Initializer(s)
     init(availableTo student: Student) {
+        
+        // Save a reference to the current student
+        self.currentStudent = student
+        
         // Get courses from the database that the provided student has not yet enroled in
         Task {
             try await getCourses(availableTo: student)
@@ -38,6 +45,24 @@ class AddEnrolmentFromStudentViewModel: Observable {
             self.availableCourses = results
             dump(self.availableCourses)
             
+        } catch {
+            debugPrint(error)
+        }
+        
+    }
+    
+    func saveEnrolment(forCourseWithId courseId: Int) async throws {
+        
+        // Create the enrolment record
+        let newEnrolment = Enrolment(studentId: currentStudent.id!, courseId: courseId)
+        
+        do {
+            // Write the new enrolment to the database
+            try await supabase
+                .from("enrols_in")
+                .insert(newEnrolment)
+                .execute()
+
         } catch {
             debugPrint(error)
         }
