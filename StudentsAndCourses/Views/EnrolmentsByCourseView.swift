@@ -66,7 +66,14 @@ struct EnrolmentsByCourseView: View {
                 }
             }
         }
-        .sheet(isPresented: $isAddEnrolmentSheetShowing) {
+        .sheet(isPresented: $isAddEnrolmentSheetShowing, onDismiss: {
+            
+            // Refresh the list of courses after adding a new student
+            Task {
+                try await viewModel.getCoursesWithStudents(selectedBy: viewModel.student!)
+            }
+            
+        }) {
             // Show the interface to add a student
             AddEnrolmentFromEnrolmentsbyCourseView(
                 isShowing: $isAddEnrolmentSheetShowing,
