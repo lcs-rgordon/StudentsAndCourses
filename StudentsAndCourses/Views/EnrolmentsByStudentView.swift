@@ -12,6 +12,9 @@ struct EnrolmentsByStudentView: View {
     // MARK: Stored properties
     let viewModel: EnrolmentsByStudentViewModel
     
+    // Are we showing the sheet to add an enrolment for a course?
+    @State private var isAddEnrolmentSheetShowing = false
+    
     // MARK: Computed properties
     var body: some View {
         VStack(alignment: .leading) {
@@ -53,6 +56,31 @@ struct EnrolmentsByStudentView: View {
 
                 }
             }
+        }
+        .toolbar {
+            // Only show the button when seeing students in a
+            // specific course
+            if viewModel.isFilteredByCourse {
+                Button {
+                    isAddEnrolmentSheetShowing = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+        }
+        .sheet(isPresented: $isAddEnrolmentSheetShowing, onDismiss: {
+            
+            // Refresh the list of students after adding a new course
+            Task {
+                try await viewModel.getStudentsWithCourses(enrolledIn: viewModel.course!)
+            }
+            
+        }) {
+            // Show the interface to add a course
+            AddEnrolmentFromEnrolmentsByStudentView(
+                isShowing: $isAddEnrolmentSheetShowing,
+                viewModel: AddEnrolmentFromEnrolmentsbyStudentViewModel(availableTo: viewModel.course!)
+            )
         }
         // Show the course code as the navigation title when filtering by a specific course
         .navigationTitle(viewModel.isFilteredByCourse ? viewModel.course!.shortCode : "Students")
