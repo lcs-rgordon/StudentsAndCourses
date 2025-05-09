@@ -7,7 +7,7 @@
 
 import Foundation
 
-@Observable
+@Observable @MainActor
 class CoursesListViewModel: Observable {
     
     // MARK: Stored properties

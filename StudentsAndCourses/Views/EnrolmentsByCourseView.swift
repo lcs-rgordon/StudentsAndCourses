@@ -5,11 +5,18 @@
 //  Created by Russell Gordon on 2024-06-09.
 //
 
+import OSLog
 import SwiftUI
 
 struct EnrolmentsByCourseView: View {
     
     // MARK: Stored properties
+
+    // Gain access to the shared change notifier so we can tell when
+    // a refresh of data on this view is required
+    @Environment(EnrollmentChangeNotifier.self) private var changeNotifier
+    
+    // Provides data for this view
     let viewModel: EnrolmentsByCourseViewModel
     
     // Are we showing the sheet to add an enrolment for a student?
@@ -66,19 +73,18 @@ struct EnrolmentsByCourseView: View {
                 }
             }
         }
-        .sheet(isPresented: $isAddEnrolmentSheetShowing, onDismiss: {
-            
-            // Refresh the list of courses after adding a new student
-            Task {
-                try await viewModel.getCoursesWithStudents(selectedBy: viewModel.student!)
-            }
-            
-        }) {
+        .sheet(isPresented: $isAddEnrolmentSheetShowing) {
             // Show the interface to add a student
             AddEnrolmentFromEnrolmentsbyCourseView(
                 isShowing: $isAddEnrolmentSheetShowing,
                 viewModel: AddEnrolmentFromEnrolmentsbyCourseViewModel(availableTo: viewModel.student!)
             )
+        }
+        .onChange(of: changeNotifier.changeCount) {
+
+            Logger.viewCycle.info("EnrolmentsByCourseView: Database change observed; updating view model.")
+            
+            viewModel.refresh()
         }
         
         // Show the student name as the navigation title when filtering by a specific student
