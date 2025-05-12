@@ -8,7 +8,7 @@
 import Foundation
 import PostgREST
 
-@Observable
+@Observable @MainActor
 class AddEnrolmentFromEnrolmentsbyStudentViewModel: Observable {
     
     // MARK: Stored properties
