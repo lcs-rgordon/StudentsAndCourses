@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 @Observable @MainActor
 class EnrolmentsByStudentViewModel: Observable {
@@ -30,16 +31,27 @@ class EnrolmentsByStudentViewModel: Observable {
         // Store the course we may be filtering on
         self.course = course
         
+        // Refresh data
+        self.refresh()
+        
+    }
+    
+    func refresh() {
+        
+        Logger.database.info("EnrolmentsByStudentViewModel: Refreshing...")
+        
         Task {
             // Try to unwrap the potentially nil value
             if let course = course {
                 // course is not nil, so...
                 // ... get just the students enrolled in the provided course
                 try await getStudentsWithCourses(enrolledIn: course)
+                Logger.database.info("EnrolmentsByStudentViewModel: Got students available to course \(course.shortCode):  \(course.name) with id \(course.id ?? 0).")
             } else {
                 // course is nil, so...
                 // ... get all students from the database
                 try await getStudentsWithCourses()
+                Logger.database.info("EnrolmentsByStudentViewModel: Got all students available.")
             }
         }
     }
