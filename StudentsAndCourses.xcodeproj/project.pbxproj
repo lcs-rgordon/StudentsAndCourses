@@ -10,15 +10,17 @@
 		810E98082C15EE6500B0A051 /* StudentsAndCoursesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810E98072C15EE6500B0A051 /* StudentsAndCoursesApp.swift */; };
 		810E980C2C15EE6600B0A051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 810E980B2C15EE6600B0A051 /* Assets.xcassets */; };
 		810E980F2C15EE6600B0A051 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 810E980E2C15EE6600B0A051 /* Preview Assets.xcassets */; };
+		8136A9FE2DD22F3A00CB0E43 /* EnrollmentChangeNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136A9FD2DD22F3A00CB0E43 /* EnrollmentChangeNotifier.swift */; };
+		8136AA012DD2311100CB0E43 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136AA002DD2310E00CB0E43 /* Logger.swift */; };
+		8136AA042DD2319A00CB0E43 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 8136AA032DD2319A00CB0E43 /* Auth */; };
+		8136AA062DD2319A00CB0E43 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 8136AA052DD2319A00CB0E43 /* Functions */; };
+		8136AA082DD2319A00CB0E43 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 8136AA072DD2319A00CB0E43 /* PostgREST */; };
+		8136AA0A2DD2319A00CB0E43 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 8136AA092DD2319A00CB0E43 /* Realtime */; };
+		8136AA0C2DD2319A00CB0E43 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 8136AA0B2DD2319A00CB0E43 /* Storage */; };
+		8136AA0E2DD2319A00CB0E43 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8136AA0D2DD2319A00CB0E43 /* Supabase */; };
 		817CC15F2DCC37F9003B88B8 /* AddEnrolmentFromEnrolmentsbyStudentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817CC15E2DCC37DD003B88B8 /* AddEnrolmentFromEnrolmentsbyStudentViewModel.swift */; };
 		817CC1612DCC3961003B88B8 /* AddEnrolmentFromEnrolmentsByStudentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817CC1602DCC3958003B88B8 /* AddEnrolmentFromEnrolmentsByStudentView.swift */; };
 		81A2E2722C15EEF500E6285E /* Supabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2712C15EEF500E6285E /* Supabase.swift */; };
-		81A2E2752C15EFF400E6285E /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2E2742C15EFF400E6285E /* Auth */; };
-		81A2E2772C15EFF400E6285E /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2E2762C15EFF400E6285E /* Functions */; };
-		81A2E2792C15EFF400E6285E /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2E2782C15EFF400E6285E /* PostgREST */; };
-		81A2E27B2C15EFF400E6285E /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2E27A2C15EFF400E6285E /* Realtime */; };
-		81A2E27D2C15EFF400E6285E /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2E27C2C15EFF400E6285E /* Storage */; };
-		81A2E27F2C15EFF400E6285E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 81A2E27E2C15EFF400E6285E /* Supabase */; };
 		81A2E2812C15F1CF00E6285E /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2802C15F1CF00E6285E /* LandingView.swift */; };
 		81A2E2832C15F1F200E6285E /* EnrolmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2822C15F1F200E6285E /* EnrolmentsView.swift */; };
 		81A2E2852C15F22B00E6285E /* CoursesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A2E2842C15F22B00E6285E /* CoursesListView.swift */; };
@@ -45,6 +47,8 @@
 		810E98072C15EE6500B0A051 /* StudentsAndCoursesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsAndCoursesApp.swift; sourceTree = "<group>"; };
 		810E980B2C15EE6600B0A051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		810E980E2C15EE6600B0A051 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8136A9FD2DD22F3A00CB0E43 /* EnrollmentChangeNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentChangeNotifier.swift; sourceTree = "<group>"; };
+		8136AA002DD2310E00CB0E43 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		817CC15E2DCC37DD003B88B8 /* AddEnrolmentFromEnrolmentsbyStudentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEnrolmentFromEnrolmentsbyStudentViewModel.swift; sourceTree = "<group>"; };
 		817CC1602DCC3958003B88B8 /* AddEnrolmentFromEnrolmentsByStudentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEnrolmentFromEnrolmentsByStudentView.swift; sourceTree = "<group>"; };
 		81A2E2712C15EEF500E6285E /* Supabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Supabase.swift; sourceTree = "<group>"; };
@@ -74,12 +78,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81A2E2792C15EFF400E6285E /* PostgREST in Frameworks */,
-				81A2E2772C15EFF400E6285E /* Functions in Frameworks */,
-				81A2E27F2C15EFF400E6285E /* Supabase in Frameworks */,
-				81A2E2752C15EFF400E6285E /* Auth in Frameworks */,
-				81A2E27D2C15EFF400E6285E /* Storage in Frameworks */,
-				81A2E27B2C15EFF400E6285E /* Realtime in Frameworks */,
+				8136AA082DD2319A00CB0E43 /* PostgREST in Frameworks */,
+				8136AA062DD2319A00CB0E43 /* Functions in Frameworks */,
+				8136AA0E2DD2319A00CB0E43 /* Supabase in Frameworks */,
+				8136AA042DD2319A00CB0E43 /* Auth in Frameworks */,
+				8136AA0C2DD2319A00CB0E43 /* Storage in Frameworks */,
+				8136AA0A2DD2319A00CB0E43 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +111,7 @@
 			children = (
 				810E98072C15EE6500B0A051 /* StudentsAndCoursesApp.swift */,
 				810E98182C15EE9D00B0A051 /* Helpers */,
+				8136A9FF2DD230BC00CB0E43 /* Logging */,
 				810E98152C15EE8100B0A051 /* Model */,
 				810E98162C15EE8A00B0A051 /* Views */,
 				810E98172C15EE9100B0A051 /* ViewModels */,
@@ -169,9 +174,18 @@
 		810E98182C15EE9D00B0A051 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8136A9FD2DD22F3A00CB0E43 /* EnrollmentChangeNotifier.swift */,
 				81A2E2712C15EEF500E6285E /* Supabase.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8136A9FF2DD230BC00CB0E43 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				8136AA002DD2310E00CB0E43 /* Logger.swift */,
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,12 +205,12 @@
 			);
 			name = StudentsAndCourses;
 			packageProductDependencies = (
-				81A2E2742C15EFF400E6285E /* Auth */,
-				81A2E2762C15EFF400E6285E /* Functions */,
-				81A2E2782C15EFF400E6285E /* PostgREST */,
-				81A2E27A2C15EFF400E6285E /* Realtime */,
-				81A2E27C2C15EFF400E6285E /* Storage */,
-				81A2E27E2C15EFF400E6285E /* Supabase */,
+				8136AA032DD2319A00CB0E43 /* Auth */,
+				8136AA052DD2319A00CB0E43 /* Functions */,
+				8136AA072DD2319A00CB0E43 /* PostgREST */,
+				8136AA092DD2319A00CB0E43 /* Realtime */,
+				8136AA0B2DD2319A00CB0E43 /* Storage */,
+				8136AA0D2DD2319A00CB0E43 /* Supabase */,
 			);
 			productName = StudentsAndCourses;
 			productReference = 810E98042C15EE6500B0A051 /* StudentsAndCourses.app */;
@@ -227,7 +241,7 @@
 			);
 			mainGroup = 810E97FB2C15EE6500B0A051;
 			packageReferences = (
-				81A2E2732C15EFF400E6285E /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				8136AA022DD2319A00CB0E43 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			productRefGroup = 810E98052C15EE6500B0A051 /* Products */;
 			projectDirPath = "";
@@ -275,9 +289,11 @@
 				81A2E2A72C17110000E6285E /* Enrolment.swift in Sources */,
 				810E98082C15EE6500B0A051 /* StudentsAndCoursesApp.swift in Sources */,
 				81A2E28D2C16086200E6285E /* AddCourseView.swift in Sources */,
+				8136AA012DD2311100CB0E43 /* Logger.swift in Sources */,
 				81A2E2932C16165400E6285E /* AddStudentView.swift in Sources */,
 				81A2E2A32C16588600E6285E /* EnrolmentsByStudentViewModel.swift in Sources */,
 				81A2E2912C1613E300E6285E /* StudentsListViewModel.swift in Sources */,
+				8136A9FE2DD22F3A00CB0E43 /* EnrollmentChangeNotifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,45 +501,45 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		81A2E2732C15EFF400E6285E /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+		8136AA022DD2319A00CB0E43 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase-community/supabase-swift";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.1;
+				kind = exactVersion;
+				version = 2.24.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		81A2E2742C15EFF400E6285E /* Auth */ = {
+		8136AA032DD2319A00CB0E43 /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81A2E2732C15EFF400E6285E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 8136AA022DD2319A00CB0E43 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Auth;
 		};
-		81A2E2762C15EFF400E6285E /* Functions */ = {
+		8136AA052DD2319A00CB0E43 /* Functions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81A2E2732C15EFF400E6285E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 8136AA022DD2319A00CB0E43 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Functions;
 		};
-		81A2E2782C15EFF400E6285E /* PostgREST */ = {
+		8136AA072DD2319A00CB0E43 /* PostgREST */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81A2E2732C15EFF400E6285E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 8136AA022DD2319A00CB0E43 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = PostgREST;
 		};
-		81A2E27A2C15EFF400E6285E /* Realtime */ = {
+		8136AA092DD2319A00CB0E43 /* Realtime */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81A2E2732C15EFF400E6285E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 8136AA022DD2319A00CB0E43 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Realtime;
 		};
-		81A2E27C2C15EFF400E6285E /* Storage */ = {
+		8136AA0B2DD2319A00CB0E43 /* Storage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81A2E2732C15EFF400E6285E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 8136AA022DD2319A00CB0E43 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Storage;
 		};
-		81A2E27E2C15EFF400E6285E /* Supabase */ = {
+		8136AA0D2DD2319A00CB0E43 /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 81A2E2732C15EFF400E6285E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			package = 8136AA022DD2319A00CB0E43 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
 		};
 /* End XCSwiftPackageProductDependency section */

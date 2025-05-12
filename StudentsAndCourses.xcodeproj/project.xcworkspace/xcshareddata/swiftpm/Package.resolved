@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/supabase-swift",
       "state" : {
-        "revision" : "40112d26f2f1a58a989fee10dce85de49b0b8e7b",
-        "version" : "2.13.2"
+        "revision" : "bbff2689e9c5a8da878b303af6ea03d6c9748fec",
+        "version" : "2.24.1"
       }
     },
     {
@@ -26,6 +26,24 @@
       "state" : {
         "revision" : "bc1c29221f6dfeb0ebbfbc98eb95cd3d4967868e",
         "version" : "3.4.0"
+      }
+    },
+    {
+      "identity" : "swift-http-types",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-http-types.git",
+      "state" : {
+        "revision" : "a0a57e949a8903563aba4615869310c0ebf14c03",
+        "version" : "1.4.0"
+      }
+    },
+    {
+      "identity" : "xctest-dynamic-overlay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "state" : {
+        "revision" : "39de59b2d47f7ef3ca88a039dff3084688fe27f4",
+        "version" : "1.5.2"
       }
     }
   ],
